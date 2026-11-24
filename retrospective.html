@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retrospective | FitTrack Agile PM Case Study</title>
+<meta name="description" content="FitTrack agile project management case study: Retrospective.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="topnav" aria-label="Case study pages"><div class="wrap nav-in"><a href="index.html" class="brand">FitTrack</a><a href="charter.html">Charter</a><a href="backlog.html">Backlog</a><a href="sprints.html">Sprint Plans</a><a href="raci.html">RACI</a><a href="risks.html">Risk Register</a><a href="burndown.html">Burndown</a><a href="retrospective.html" aria-current="page">Retrospective</a><a href="status-report.html">Status Report</a></div></nav>
+<header class="pagehead"><div class="wrap"><div class="eyebrow">Case study page</div><h1>Retrospective</h1><p class="sub">What went well, what did not, and the owned action items.</p></div></header>
+<main class="wrap doc"><p><strong>Format:</strong> Start / Stop / Continue
+<strong>Participants:</strong> Full team (PM, 2x Dev, Design, QA)</p>
+<h2>What went well</h2>
+<ul>
+<li>Pre-agreeing a "must cut" list at charter stage (R-03) meant scope decisions during
+  the project were fast and low-drama — no late-stage negotiation with the sponsor.</li>
+<li>Routing all mid-sprint feature requests through the PM (R-04) prevented scope creep
+  from silently eating sprint capacity — used successfully in Sprint 2.</li>
+<li>Investing unstoried effort into infra/architecture in Sprint 1 paid off — Sprints 2
+  and 3 had smoother, more predictable velocity.</li>
+<li>Weekly async status reports kept the sponsor aligned without needing extra meetings.</li>
+</ul>
+<h2>What didn't go well</h2>
+<ul>
+<li>Story point estimates for step-tracking work (FT-6) were initially too optimistic —
+  the sensor API spike should have happened in Sprint 0, not absorbed into Sprint 1
+  capacity planning.</li>
+<li>QA was under-resourced early on — regression suite (FT-12) wasn't started until
+  Sprint 3, leaving less buffer than ideal for a release sprint.</li>
+</ul>
+<h2>Action items</h2>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Owner</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add a technical spike step to Sprint 0 checklist for future projects with unfamiliar APIs</td>
+<td>PM</td>
+<td>Adopted for next project</td>
+</tr>
+<tr>
+<td>Bring QA into backlog grooming from Sprint 1, not Sprint 3</td>
+<td>PM + QA Lead</td>
+<td>Adopted</td>
+</tr>
+<tr>
+<td>Keep the "pre-agreed cut list" practice for all future project charters</td>
+<td>PM</td>
+<td>Adopted</td>
+</tr>
+<tr>
+<td>Formalize the mid-sprint change-request process used in Sprint 2 into a written team norm</td>
+<td>PM</td>
+<td>Documented in team wiki</td>
+</tr>
+</tbody>
+</table>
+<h2>Outcome</h2>
+<p>MVP delivered on time, 0 critical bugs, 500 beta users onboarded. Day-7 retention
+came in at 34% against a 30% target.</p><div class="pager"><a class="pg" href="burndown.html">&larr; Burndown</a><a class="pg" href="status-report.html">Status Report &rarr;</a></div></main>
+<footer>
+  <div class="wrap">
+    <p>FITTRACK - A SELF-DIRECTED AGILE PROJECT MANAGEMENT PORTFOLIO PROJECT. THE PROJECT IS SIMULATED.</p>
+    <div class="links"><a href="https://github.com/Mrunali121/fittrack-agile-pm" target="_blank" rel="noopener">GitHub</a><a href="https://mrunali121.github.io/" target="_blank" rel="noopener">Portfolio</a></div>
+  </div>
+</footer>
+</body>
+</html>

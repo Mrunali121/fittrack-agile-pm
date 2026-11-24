@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sprint Planning | FitTrack Agile PM Case Study</title>
+<meta name="description" content="FitTrack agile project management case study: Sprint Planning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="topnav" aria-label="Case study pages"><div class="wrap nav-in"><a href="index.html" class="brand">FitTrack</a><a href="charter.html">Charter</a><a href="backlog.html">Backlog</a><a href="sprints.html" aria-current="page">Sprint Plans</a><a href="raci.html">RACI</a><a href="risks.html">Risk Register</a><a href="burndown.html">Burndown</a><a href="retrospective.html">Retrospective</a><a href="status-report.html">Status Report</a></div></nav>
+<header class="pagehead"><div class="wrap"><div class="eyebrow">Case study page</div><h1>Sprint Planning</h1><p class="sub">Capacity-based commitment for each of the three two-week sprints.</p></div></header>
+<main class="wrap doc"><p class="jump">Jump to: <a href="#sprint-1">Sprint 1</a> · <a href="#sprint-2">Sprint 2</a> · <a href="#sprint-3">Sprint 3</a></p><section class="sp" id="sprint-1"><h2 class="sp-h">Sprint 1</h2><p><strong>Duration:</strong> Weeks 1–2
+<strong>Sprint Goal:</strong> Users can sign up and manually log a workout end-to-end.</p>
+<h2>Team Capacity</h2>
+<p>5 people × 2 weeks, minus 1 dev on-call day and 1 team offsite half-day →
+<strong>Effective capacity: 34 story points</strong> (based on team's historical velocity of ~35/sprint)</p>
+<h2>Committed Stories</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Story</th>
+<th>Points</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FT-1</td>
+<td>Email sign-up</td>
+<td>3</td>
+<td>Dev A</td>
+</tr>
+<tr>
+<td>FT-2</td>
+<td>Onboarding tutorial</td>
+<td>2</td>
+<td>Design + Dev B</td>
+</tr>
+<tr>
+<td>FT-3</td>
+<td>Log workout type/duration</td>
+<td>5</td>
+<td>Dev A</td>
+</tr>
+<tr>
+<td>FT-5</td>
+<td>Edit/delete workout entry</td>
+<td>3</td>
+<td>Dev B</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Committed points: 13</strong> (intentionally conservative — first sprint, new team cadence,
+plus foundational architecture work not story-pointed: auth backend, DB schema, CI/CD
+pipeline setup, ~18 points of unstoried infra work)</p>
+<h2>Definition of Done</h2>
+<ul>
+<li>Code reviewed by 1 peer</li>
+<li>Unit tests passing</li>
+<li>QA sign-off on staging</li>
+<li>No P1/P2 bugs open</li>
+</ul>
+<h2>Risks flagged at planning</h2>
+<ul>
+<li>Auth backend is a new pattern for the team — timeboxed to 3 days, fallback to
+  simpler email-link auth if OAuth proves too slow (see Risk Register R-01).</li>
+</ul>
+<h2>Outcome</h2>
+<p>Sprint completed on schedule. All 4 committed stories delivered + infra foundation
+laid for Sprint 2. Velocity: 13 points (story-pointed) + infra work.</p></section><section class="sp" id="sprint-2"><h2 class="sp-h">Sprint 2</h2><p><strong>Duration:</strong> Weeks 3–4
+<strong>Sprint Goal:</strong> Users can passively track steps and build a streak.</p>
+<h2>Team Capacity</h2>
+<p>Full team available. <strong>Planned capacity: 21 story points</strong> (velocity trending up
+after Sprint 1's infra investment).</p>
+<h2>Committed Stories</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Story</th>
+<th>Points</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FT-6</td>
+<td>Automatic step tracking</td>
+<td>8</td>
+<td>Dev A</td>
+</tr>
+<tr>
+<td>FT-7</td>
+<td>Weekly step chart</td>
+<td>5</td>
+<td>Dev B + Design</td>
+</tr>
+<tr>
+<td>FT-8</td>
+<td>Daily streak logic</td>
+<td>5</td>
+<td>Dev A</td>
+</tr>
+<tr>
+<td>FT-9</td>
+<td>Push notification reminder</td>
+<td>3</td>
+<td>Dev B</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Committed points: 21</strong></p>
+<h2>Mid-Sprint Change: Scope Creep Incident</h2>
+<p>On Day 6, the Head of Product requested an additional feature — a "streak freeze"
+(let users protect a streak once per week) — for the beta launch, based on early
+user testing feedback.</p>
+<p><strong>PM decision process:</strong>
+1. Assessed impact: new story estimated at 5 points, team had 3 days of slack
+   remaining based on early burndown trend.
+2. Did <strong>not</strong> silently absorb it — brought it to the sponsor with two options:
+   (a) add it and accept schedule risk on FT-9, or (b) defer to Sprint 3.
+3. Sponsor agreed to defer to Sprint 3 backlog (added as FT-10 follow-up), protecting
+   the sprint goal.</p>
+<p>This decision and its impact on the burndown are visualized in
+<a href="burndown.html"><code>06-sprint-burndown-chart.png</code></a>.</p>
+<h2>Outcome</h2>
+<p>All 4 committed stories delivered on time. Sprint goal met. Streak-freeze feature
+correctly deferred rather than causing a late-sprint scramble.</p></section><section class="sp" id="sprint-3"><h2 class="sp-h">Sprint 3</h2><p><strong>Duration:</strong> Weeks 5–6
+<strong>Sprint Goal:</strong> Harden the app for release and ship the MVP to beta.</p>
+<h2>Team Capacity</h2>
+<p><strong>Planned capacity: 19 story points</strong> (slightly reduced — 1 day reserved for release
+activities and beta onboarding coordination).</p>
+<h2>Committed Stories</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Story</th>
+<th>Points</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FT-11</td>
+<td>Crash reporting integration</td>
+<td>3</td>
+<td>Dev A</td>
+</tr>
+<tr>
+<td>FT-12</td>
+<td>Regression test suite</td>
+<td>5</td>
+<td>QA</td>
+</tr>
+<tr>
+<td>FT-4</td>
+<td>Workout notes field</td>
+<td>2</td>
+<td>Dev B</td>
+</tr>
+<tr>
+<td>FT-10</td>
+<td>7-day streak badge (deferred from Sprint 2)</td>
+<td>3</td>
+<td>Dev A + Design</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Committed points: 13</strong> (remaining capacity reserved for bug-fix buffer, standard
+practice for a release sprint)</p>
+<h2>Release Checklist (owned by PM)</h2>
+<ul>
+<li>[ ] App Store beta build submitted (TestFlight)</li>
+<li>[ ] Crash reporting dashboard live and monitored</li>
+<li>[ ] Beta invite emails scheduled with Community Manager</li>
+<li>[ ] Rollback plan documented with Engineering Lead</li>
+<li>[ ] Go/no-go meeting held 2 days before launch</li>
+</ul>
+<h2>Outcome</h2>
+<p>MVP shipped on Day 13 of the sprint (1 day ahead of the 6-week deadline). 0 critical
+bugs at launch. Beta invites sent to 500 users as planned.</p></section><div class="pager"><a class="pg" href="backlog.html">&larr; Backlog</a><a class="pg" href="raci.html">RACI &rarr;</a></div></main>
+<footer>
+  <div class="wrap">
+    <p>FITTRACK - A SELF-DIRECTED AGILE PROJECT MANAGEMENT PORTFOLIO PROJECT. THE PROJECT IS SIMULATED.</p>
+    <div class="links"><a href="https://github.com/Mrunali121/fittrack-agile-pm" target="_blank" rel="noopener">GitHub</a><a href="https://mrunali121.github.io/" target="_blank" rel="noopener">Portfolio</a></div>
+  </div>
+</footer>
+</body>
+</html>

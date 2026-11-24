@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Risk Register | FitTrack Agile PM Case Study</title>
+<meta name="description" content="FitTrack agile project management case study: Risk Register.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="topnav" aria-label="Case study pages"><div class="wrap nav-in"><a href="index.html" class="brand">FitTrack</a><a href="charter.html">Charter</a><a href="backlog.html">Backlog</a><a href="sprints.html">Sprint Plans</a><a href="raci.html">RACI</a><a href="risks.html" aria-current="page">Risk Register</a><a href="burndown.html">Burndown</a><a href="retrospective.html">Retrospective</a><a href="status-report.html">Status Report</a></div></nav>
+<header class="pagehead"><div class="wrap"><div class="eyebrow">Case study page</div><h1>Risk Register</h1><p class="sub">Reviewed at every sprint planning session, not written once and forgotten.</p></div></header>
+<main class="wrap doc"><table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Risk</th>
+<th>Likelihood</th>
+<th>Impact</th>
+<th>Score (L×I)</th>
+<th>Mitigation</th>
+<th>Owner</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>R-01</td>
+<td>OAuth integration takes longer than estimated, delaying Sprint 1</td>
+<td>Medium (3)</td>
+<td>Medium (3)</td>
+<td>9</td>
+<td>Timebox to 3 days; fallback to simpler email-link auth if not resolved</td>
+<td>Eng Lead</td>
+<td>Closed — fallback not needed, OAuth delivered on time</td>
+</tr>
+<tr>
+<td>R-02</td>
+<td>Step-tracking sensor API behaves inconsistently across iOS versions</td>
+<td>Medium (3)</td>
+<td>High (4)</td>
+<td>12</td>
+<td>Early spike in Sprint 1 planning to test on 3 iOS versions before committing story points</td>
+<td>Dev A</td>
+<td>Closed — spike completed, no blockers found</td>
+</tr>
+<tr>
+<td>R-03</td>
+<td>Team capacity insufficient to hit 6-week MVP deadline with full feature set</td>
+<td>High (4)</td>
+<td>High (4)</td>
+<td>16</td>
+<td>Pre-agreed "must cut" list with Sponsor at charter stage (social sharing, wearables) so scope can flex without a late renegotiation</td>
+<td>PM</td>
+<td>Mitigated — social sharing cut per plan, no deadline slip</td>
+</tr>
+<tr>
+<td>R-04</td>
+<td>Mid-project stakeholder feature requests cause scope creep</td>
+<td>High (4)</td>
+<td>Medium (3)</td>
+<td>12</td>
+<td>All new requests routed through PM for impact assessment before entering a sprint; sponsor decides add vs. defer</td>
+<td>PM</td>
+<td>Active — used successfully in Sprint 2 (streak-freeze request deferred)</td>
+</tr>
+<tr>
+<td>R-05</td>
+<td>Beta user onboarding capacity (Community Manager) not ready in time for launch</td>
+<td>Low (2)</td>
+<td>High (4)</td>
+<td>8</td>
+<td>Weekly check-in with Community Manager from Sprint 2 onward; invite email drafted by Week 4</td>
+<td>PM</td>
+<td>Closed — invites ready ahead of schedule</td>
+</tr>
+<tr>
+<td>R-06</td>
+<td>Push notification service (3rd-party) has rate limits that affect streak reminders at scale</td>
+<td>Low (2)</td>
+<td>Medium (3)</td>
+<td>6</td>
+<td>Load-test with 500 simulated users in Sprint 3 QA pass</td>
+<td>QA Lead</td>
+<td>Closed — passed load test</td>
+</tr>
+</tbody>
+</table>
+<h2>Scoring key</h2>
+<ul>
+<li>Likelihood / Impact: 1 (Low) – 4 (High)</li>
+<li>Score ≥ 12: reviewed at every sprint planning session</li>
+<li>Score 6–11: reviewed at sprint review</li>
+<li>Score &lt; 6: monitored, no active review required</li>
+</ul>
+<h2>Review cadence</h2>
+<p>Risk register reviewed at the start of every sprint planning session; new risks can be
+raised by any team member and are triaged by the PM within 24 hours.</p><div class="pager"><a class="pg" href="raci.html">&larr; RACI</a><a class="pg" href="burndown.html">Burndown &rarr;</a></div></main>
+<footer>
+  <div class="wrap">
+    <p>FITTRACK - A SELF-DIRECTED AGILE PROJECT MANAGEMENT PORTFOLIO PROJECT. THE PROJECT IS SIMULATED.</p>
+    <div class="links"><a href="https://github.com/Mrunali121/fittrack-agile-pm" target="_blank" rel="noopener">GitHub</a><a href="https://mrunali121.github.io/" target="_blank" rel="noopener">Portfolio</a></div>
+  </div>
+</footer>
+</body>
+</html>
